@@ -1,0 +1,331 @@
+/*Cor de fundo: */
+body {background: #252525}
+
+/* CONFIGURAÇÕES PARA OS GRÁFICOS: */
+/*Caixa para os gráficos: */
+div.graf{
+	position: fixed;
+	top: 2vw;
+	left: 1vw;
+	
+	font-size: 0.6vw;
+	text-align: center;
+	
+	width: 62vw;
+	overflow: auto;
+}
+/*Celula para graf sinal*/
+div.cels{
+	display: inline-block;
+	vertical-align: middle;
+	
+	width: 29vw;
+	
+	margin: 0vw 0vw 1vw 0vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+	border-radius: 0.5vw;			
+}
+div.cels:hover {
+	background: #F1EDED;
+	background-image: linear-gradient(to bottom, #FAFEFE, #FBFFFF);
+	text-decoration: none;
+}	
+/*Celulas para graf sensores*/
+div.cel{
+	display: inline-block;
+	vertical-align: middle;
+	
+	width: 19vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+	border-radius: 0.5vw;			
+}
+div.cel:hover {
+	background: #F1EDED;
+	background-image: linear-gradient(to bottom, #FAFEFE, #FBFFFF);
+	text-decoration: none;
+}		
+/*Gráfico: */
+img.graf{
+	width: 93%;
+	max-height: 100%;
+	max-width: 100%;
+	
+	border: 0.2vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+	margin-right: 0.1vw;
+}
+/*Título dos gráficos: */
+h1.graf{
+	color: #747F7A
+}
+
+/* CONFIGURAÇÕES PARA INSERÇÃO DE PARÂMETROS: */
+/* MALHA ATUAL*/
+div.param1{
+	position: fixed;
+	top: 2vw;
+	right: 18vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 17.5vw;
+	
+	background-color: #F1EDED;
+	overflow: auto;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/*SINAL E TEMPO*/
+div.param2{
+	position: fixed;
+	top: 9.25vw;
+	right: 18vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 17.5vw;
+	
+	background-color: #F1EDED;
+	overflow: auto;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/*INSERIR ARQUIVOS*/
+div.param3{
+	position: fixed;
+	top: 33vw;
+	right: 18vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 17.5vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/*SALVAR RESULTADOS*/
+div.param4{
+	position: fixed;
+	top: 40.2vw;
+	right: 18vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 17.5vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/*PARÂMETROS PID*/
+div.param5{
+	position: fixed;
+	top: 2vw;
+	right: 1vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 15vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/*PID IMAGEM*/
+div.param6{
+	position: fixed;
+	top: 33vw;
+	right: 1vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 15vw;
+	
+	background-color: #F1EDED;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+/* CONFIGURAÇÃO BOTÕES: */
+button.param {
+
+	border-radius: 0.7vw;
+	border: none;
+	
+	font-family: Georgia;
+	color: #D8D8D8;
+	
+	font-size: 1vw;
+	background: #747F7A;
+	padding: 0.5vw;
+}
+button.param:hover {
+	background: #F1EDED;
+	background-image: linear-gradient(to bottom, #575B59, #575B59);
+	text-decoration: none;
+}
+/*Bloco para inserção de inputs (LADO A LADO COM TEXTO)*/
+div.paramchild{
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 0.6vw;
+	text-align: center;
+	
+	width: 6vw;			
+}
+/*Bloco para inserção de inputs (AMPLIADA)*/
+div.paramchildamp{
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 0.6vw;
+	text-align: center;
+	
+	width: 7.5vw;			
+}
+/*Configurações botões em linha única*/
+button.parambtn {
+
+	border-radius: 0.7vw;
+	border: none;
+	
+	font-family: Georgia;
+	color: #D8D8D8;
+	
+	font-size: 1vw;
+	background: #747F7A;
+	padding: 0.5vw;
+	margin: 0.5vw;
+}
+button.parambtn:hover {
+	background: #F1EDED;
+	background-image: linear-gradient(to bottom, #575B59, #575B59);
+	text-decoration: none;
+}
+div.parambtnchild{
+	display: inline-block;
+
+	font-size: 0.6vw;
+	text-align: center;
+	
+	width: 12.5vw;
+}
+/*Bloco para os componentes que alteram os parâmetros:*/
+div.input{
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 1vw;
+	text-align: center;
+
+	width: 90%;	
+}
+/*Configuração de barra deslizante:*/
+input[type=range].slider{
+	width: 12.5vw;
+	height: 2.5vw;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+}
+input[type=number].slider{
+	line-height: 1.25vw;
+	font-size: 1.25vw;
+	text-align: center;
+	
+	background: #FFFFFF;
+	outline: none;
+	opacity: 0.7;
+}
+.slider:hover{
+	opacity: 1;
+}
+.slider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	appearance: none;
+	width: 2.5vw;
+	height: 2.5vw;
+	background: #04AA6D;
+	cursor: pointer;
+}
+.slider::-moz-range-thumb{
+	width: 2.5vw;
+	height: 2.5vw;
+	background: #04AA6D;
+	cursor: pointer;
+}
+
+
+
+/*Bloco para a tabela: NÃO ESTÁ SENDO USADO*/
+div.table{
+	position: fixed;
+	top: 2vw;
+	right: 18vw;
+	
+	font-size: 1vw;
+	text-align: center;
+	
+	width: 30vw;
+	height: 82.5vw;
+	
+	background-color: #F1EDED;
+	overflow: auto;
+	border: 0.5vw;
+	border-style: solid;
+	border-color: #747F7A;
+	border-radius: 0.5vw;
+}
+div.tablechild{
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 1.2vw;
+	text-align: center;			
+}
+/*Config tabela: NÃO ESTÁ SENDO USADO*/
+table.param{
+	border-collapse: collapse;
+	width: 100%;			
+}
+table.param td, table.param th{
+	border: 1px solid #ddd;
+	padding: 0.75vw;
+}
+table.param td:hover {background-color: #bbb;}
+table.param tr:hover {background-color: #ddd;}
+table.param th {
+	background-color: #B3BCA7;
+	color: white;
+}

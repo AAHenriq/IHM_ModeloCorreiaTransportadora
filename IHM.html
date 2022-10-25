@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="visual.css">
+
+</head>
+<body>
+	<div class=graf >
+		<div class=cels >
+			<h1 class=graf>PWM</h1>
+			<img class=graf src="graf/grafico.png" alt="gráfico1"></img>
+			
+		</div>
+		<div class=cels >
+		
+			<h1 class=graf>VELOCIDADE (RPM)</h1>
+			<img class=graf src="graf/grafico.png" alt="gráfico1"></img>
+			
+		</div>
+		<br>
+		
+		<div class=cel>
+		
+			<h1 class=graf>ENCODER</h1>
+			<img class=graf src="graf/grafico.png" alt="gráfico2" ></img>
+			
+		</div>
+		<div class=cel>
+		
+			<h1 class=graf>TACOGERADOR</h1>
+			<img class=graf src="graf/grafico.png" alt="gráfico2" ></img>
+			
+		</div>
+		<div class=cel>
+		
+			<h1 class=graf>CORRENTE ELÉTRICA</h1>
+			<img class=graf src="graf/grafico.png" alt="gráfico2" ></img>
+			
+		</div>
+	</div>
+	<div class=param1>
+		<div class=paramchild>
+			<button class=param>Alterar Malha</button>
+		</div>
+		<div class=paramchildamp>
+			<h1>Malha atual:</h1>
+			<h1>Aberta</h1>
+		</div>
+	</div>
+	
+	<div class=param2>
+		<div class=input>
+			<div class=paramchild>
+				<h1>Sinal de controle: </h1>
+			</div>
+			<div class=paramchild>
+				<input type="number" min="1" max="100" value="50" class="slider" id="num1" maxlength="5">
+			</div>			
+			<input type="range" min="1" max="100" value="50" class="slider" id="slider1">
+			<script>
+				var slider1 = document.getElementById("slider1");
+				var num1 = document.getElementById("num1");
+
+				num1.oninput = function() {slider1.value = this.value;}
+				slider1.oninput = function() {num1.value = this.value;}		
+				
+			</script>
+		</div>
+		
+		<div class=input>
+			<div class=paramchild>
+				<h1>Tempo de aplicação: </h1>
+			</div>
+			<div class=paramchild>
+				<input type="number" min="1" max="100" value="50" class="slider" id="num2" maxlength="5">
+			</div>			
+			<input type="range" min="1" max="100" value="50" class="slider" id="slider2">
+			<script>
+				var slider2 = document.getElementById("slider2");
+				var num2 = document.getElementById("num2");
+
+				num2.oninput = function() {slider2.value = this.value;}
+				slider2.oninput = function() {num2.value = this.value;}		
+				
+			</script>
+		</div>		
+		<div class=paramchildamp style="margin: 1vw">
+			<button class=param>Iniciar teste com os parâmetros selecionados</button>
+		</div>
+	</div>
+	<div class=param3>
+		<div class=parambtnchild style="margin: 0.75vw">
+			<button class=parambtn>Inserir arquivo com parâmetros</button>
+		</div>
+	</div>
+	<div class=param4>
+		<div class=parambtnchild style="margin: 0.75vw">
+			<button class=parambtn>Salvar <br> resultados</button>
+		</div>
+	</div>
+	<div class=param5>
+		<div class=parambtnchild style="margin: 0.75vw">
+			<h1>Parâmetros de controle PID</h1>
+		</div>
+		<div class=input>
+			<div class=paramchild>
+				<h1>P: </h1>
+			</div>
+			<div class=paramchild>
+				<input type="number" min="1" max="100" value="50" class="slider" id="num3" maxlength="5">
+			</div>			
+			<input type="range" min="1" max="100" value="50" class="slider" id="slider3">
+			<script>
+				var slider3 = document.getElementById("slider3");
+				var num3 = document.getElementById("num3");
+
+				num3.oninput = function() {slider3.value = this.value;}
+				slider3.oninput = function() {num3.value = this.value;}		
+				
+			</script>
+		</div>
+		<div class=input>
+			<div class=paramchild>
+				<h1>I: </h1>
+			</div>
+			<div class=paramchild>
+				<input type="number" min="1" max="100" value="50" class="slider" id="num4" maxlength="5">
+			</div>			
+			<input type="range" min="1" max="100" value="50" class="slider" id="slider4">
+			<script>
+				var slider4 = document.getElementById("slider4");
+				var num4 = document.getElementById("num4");
+
+				num4.oninput = function() {slider4.value = this.value;}
+				slider4.oninput = function() {num4.value = this.value;}		
+				
+			</script>
+		</div>
+		<div class=input>
+			<div class=paramchild>
+				<h1>D: </h1>
+			</div>
+			<div class=paramchild>
+				<input type="number" min="1" max="100" value="50" class="slider" id="num5" maxlength="5">
+			</div>			
+			<input type="range" min="1" max="100" value="50" class="slider" id="slider5">
+			<script>
+				var slider5 = document.getElementById("slider5");
+				var num5 = document.getElementById("num5");
+
+				num5.oninput = function() {slider5.value = this.value;}
+				slider5.oninput = function() {num5.value = this.value;}		
+				
+			</script>
+		</div>
+		<div class=parambtnchild style="margin: 0.75vw">
+			<button class=parambtn>Inserir parâmetros de controle</button>
+		</div>
+	</div>
+	<div class=param6>
+		<div class=parambtnchild style="margin: 0.75vw">
+			<img src="graf/pid.svg" alt="PID" width="91%">
+		</div>
+	</div>
+	
+	<!-- TABELA NÃO USADA
+	<div class=table>
+		<div class=tablechild>
+			<table class=param>
+				<tr>
+					<th>Linha</th><th>Sinal Ctrl</th><th>Tempo</th>
+				</tr>
+				<tr>
+					<td>1</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>2</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>3</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>4</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>5</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>6</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>7</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>8</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>9</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>10</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>11</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>12</td><td>0</td><td>0</td>
+				</tr>
+				<tr>
+					<td>13</td><td>0</td><td>0</td>
+				</tr>
+			</table>
+		</div>
+		<div class=tablechild>
+			<table class=param>
+				<tr>
+					<th>Velocidade (RPM)</th>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>0</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	-->	
+	
+</body>
+</html>
